@@ -1,0 +1,67 @@
+[
+    {
+        "id": 0,
+        "title": "Autoportree (esimene)",
+        "filename": "autoportree_esimene.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Autoportree ilma näota",
+        "filename": "autoportree_ilma_näota.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Jalanõud",
+        "filename": "jalanõud.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Keegi keda armastan",
+        "filename": "keegi_keda_armastan.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Kinnisidee",
+        "filename": "kinnisidee.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Loom",
+        "filename": "loom.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Mälestused",
+        "filename": "mälestused.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Pimedus",
+        "filename": "pimedus.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Tehnoloogia",
+        "filename": "tehnoloogia.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Inspiratsioon",
+        "filename": "inspiratsioon.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Minu kotis",
+        "filename": "minu_kotis.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Midagi, mida ma kannan",
+        "filename": "midagi_mida_ma_kannan.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Mustrid",
+        "filename": "mustrid.jpg"
+    }
+  ]
