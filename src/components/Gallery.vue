@@ -5,7 +5,7 @@
       v-for="photo in photos"
       :key="photo.id"
     >
-    <router-link :to="`.photo/${photo.id}`">
+    <router-link :to="`./photo/${photo.id}`">
       <img :src="thumbUrl(photo.filename)" :alt="photo.title">
     </router-link>
     </div>

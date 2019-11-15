@@ -3,9 +3,8 @@
     <div class="header">
       <div class="wrapper">
         <img class="icon" src="../assets/camera.png" alt="">
-        <div class="title">FOTOPROJEKT</div>
+        <div class="title">FOTOPROJEKT [KASPER PIHL]</div>
       </div>
-      <div class="author">AUTOR: KASPER PIHL</div>
     </div>
     <Gallery/>
   </div>
@@ -26,8 +25,8 @@ export default {
 <style lang="scss">
   .header {
     height: 100px;
-    background-color: #FFE8EF;
-    color:#39324D;
+    background-color: #AAE6D9;
+    color:#040004;
     font-size: 20px;
     font-weight: 700;
     padding: 10px 70px;
