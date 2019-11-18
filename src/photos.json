@@ -16,7 +16,7 @@
     },
     {
         "id": 3,
-        "title": "Keegi keda armastan",
+        "title": "Keegi, keda armastan",
         "filename": "keegi_keda_armastan.jpg"
     },
     {
@@ -63,5 +63,30 @@
         "id": 12,
         "title": "Mustrid",
         "filename": "mustrid.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Hea harjumus",
+        "filename": "hea_harjumus.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Midagi rohelist",
+        "filename": "midagi_rohelist.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Pidu",
+        "filename": "pidu.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Võõrad",
+        "filename": "võõrad.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Midagi sinist",
+        "filename": "midagi_sinist.jpg"
     }
   ]

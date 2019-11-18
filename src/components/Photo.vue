@@ -1,14 +1,20 @@
-<template>
-  <div class="lightbox">
-    <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
-    <div class="lightbox-info">
-        {{ photo.title.toUpperCase() }}
-    </div>
-  </div>
+<template> 
+
+        <div class="lightbox">
+            <div class="lightbox-info">
+                {{ photo.title.toUpperCase() }}
+                <img class="close-btn" src="../assets/close.png" @click="goBack">
+            </div>
+            
+            <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
+            
+        </div>
+
 </template>
 
 <script>
 import photos from '@/photos.json';
+import router from '../router'
 
 export default {
   name: 'Photo',
@@ -28,6 +34,9 @@ export default {
     photoUrl(filename) {
       return require(`../assets/images/${filename}`);
     },
+    goBack() {
+        router.go(-1);
+    }
   },
 };
 </script>
@@ -42,15 +51,23 @@ export default {
         background-position: center top;
     }
     .lightbox {
-        background-color: #000;
+        background-color: rgba(255, 255, 255, 0.1);
         color: #fff;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px 1fr 50px;
+        grid-template-rows: 50px 100px 1fr 50px;
         justify-items: center;
         align-items: center;
     }
     .lightbox-info {
         grid-row-start: 2;
+        font-weight: bold;
+    }
+    .close-btn {
+        cursor: pointer;
+        margin-left: 15px;
+        margin-top: 5px;
+        vertical-align: bottom;
+        width: 18px;
     }
 </style>
