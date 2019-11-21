@@ -88,5 +88,20 @@
         "id": 17,
         "title": "Midagi sinist",
         "filename": "midagi_sinist.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Lähivõte",
+        "filename": "lähivõte.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Midagi, mida ma tahan",
+        "filename": "midagi_mida_ma_tahan.jpg"
+    },
+    {
+        "id": 20,
+        "title": "Mustvalge",
+        "filename": "mustvalge.jpg"
     }
   ]
