@@ -5,9 +5,18 @@
       v-for="photo in photos"
       :key="photo.id"
     >
-    <router-link :to="`./photo/${photo.id}`">
-      <img :src="thumbUrl(photo.filename)" :alt="photo.title">
-    </router-link>
+      <router-link :to="`./photo/${photo.id}`">
+        <img 
+          :src="thumbUrl(photo.filename)"
+          :alt="photo.title"
+          @mouseover="scaleItem = photo.id" 
+          @mouseout="scaleItem = null" 
+          :class="[
+            'image',
+            {scale: scaleItem === photo.id}
+          ]"
+        >
+      </router-link>
     </div>
   </div>
 </template>
@@ -19,7 +28,8 @@ export default {
   name: 'Gallery',
   data() {
     return {
-      photos
+      photos,
+      scaleItem: null
     }
   },
   methods: {
@@ -42,5 +52,11 @@ export default {
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
+  }
+  .image {
+    transition: transform 0.2s ease-in;
+  }
+  .scale {
+    transform: scale(1.05);
   }
 </style>

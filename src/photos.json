@@ -103,5 +103,15 @@
         "id": 20,
         "title": "Mustvalge",
         "filename": "mustvalge.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Pilved",
+        "filename": "pilved.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Muutused",
+        "filename": "muutused.jpg"
     }
   ]

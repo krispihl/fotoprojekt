@@ -1,15 +1,13 @@
 <template> 
-
-        <div class="lightbox">
-            <div class="lightbox-info">
-                {{ photo.title.toUpperCase() }}
-                <img class="close-btn" src="../assets/close.png" @click="goBack">
-            </div>
-            
-            <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
-            
+    <div class="lightbox">
+        <div class="lightbox-info">
+            <img v-if="Number(this.$route.params.id) !== 0" class="close-btn" src="../assets/previous.png" @click="previousImage">
+            {{ photo.title.toUpperCase() }}
+            <img v-if="(Number(this.$route.params.id) + 1) !== photos.length" class="close-btn" src="../assets/next.png" @click="nextImage">
+            <img class="close-btn" src="../assets/close.png" @click="goHome">
         </div>
-
+        <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
+    </div>
 </template>
 
 <script>
@@ -34,10 +32,18 @@ export default {
     photoUrl(filename) {
       return require(`../assets/images/${filename}`);
     },
-    goBack() {
-        router.go(-1);
+    goHome() {
+        router.push('/');
+    },
+    previousImage() {
+        const previousPageId = Number(this.$route.params.id) -1;
+        this.$router.push(`/photo/${previousPageId}`);
+    },
+    nextImage() {
+        const nextPageId = Number(this.$route.params.id) +1;
+        this.$router.push(`/photo/${nextPageId}`);
     }
-  },
+  }
 };
 </script>
 
@@ -65,8 +71,7 @@ export default {
     }
     .close-btn {
         cursor: pointer;
-        margin-left: 15px;
-        margin-top: 5px;
+        margin: 5px 8px 0;
         vertical-align: bottom;
         width: 18px;
     }
