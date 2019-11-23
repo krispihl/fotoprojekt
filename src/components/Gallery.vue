@@ -5,7 +5,10 @@
       v-for="photo in photos"
       :key="photo.id"
     >
-      <router-link :to="`./photo/${photo.id}`">
+      <router-link 
+        :to="`./photo/${photo.id}`"
+        class="link"
+      >
         <img 
           :src="thumbUrl(photo.filename)"
           :alt="photo.title"
@@ -16,6 +19,12 @@
             {scale: scaleItem === photo.id}
           ]"
         >
+        <div 
+          v-if="scaleItem === photo.id"
+          class="overlay"
+        >
+          {{ photo.title.toUpperCase() }}
+        </div>
       </router-link>
     </div>
   </div>
@@ -54,9 +63,23 @@ export default {
     border-radius: 20px;
   }
   .image {
-    transition: transform 0.2s ease-in;
+    transition: transform 0.25s ease-in;
   }
   .scale {
     transform: scale(1.05);
+  }
+  .link {
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    padding: 7px 10px 5px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #040004;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1.2rem;
   }
 </style>

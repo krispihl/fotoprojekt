@@ -27,11 +27,11 @@ export default {
 
 <style lang="scss">
   .header {
-    height: 100px;
+    height: 85px;
     background-color: #563444;
     color:#fff;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 10px 70px;
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@ export default {
   }
   .icon {
     vertical-align: bottom;
-    height: 22px;
+    height: 24px;
     margin-left: 10px;
     margin-right: 5px;
   }
