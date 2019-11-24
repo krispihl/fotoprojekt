@@ -1,10 +1,10 @@
 <template> 
     <div class="lightbox">
         <div class="lightbox-info">
-            <img v-if="Number(this.$route.params.id) !== 0" class="close-btn" src="../assets/previous.png" @click="previousImage">
+            <span v-if="Number(this.$route.params.id) !== 0" class="close-btn" @click="previousImage"><</span>
             {{ photo.title.toUpperCase() }}
-            <img v-if="(Number(this.$route.params.id) + 1) !== photos.length" class="close-btn" src="../assets/next.png" @click="nextImage">
-            <img class="close-btn" src="../assets/close.png" @click="goHome">
+            <span v-if="(Number(this.$route.params.id) + 1) !== photos.length" class="close-btn" @click="nextImage">></span>
+            <span img class="close-btn" @click="goHome">X</span>
         </div>
         <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
     </div>
@@ -58,7 +58,6 @@ export default {
     }
     .lightbox {
         background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 50px 100px 1fr 50px;
@@ -67,7 +66,7 @@ export default {
     }
     .lightbox-info {
         grid-row-start: 2;
-        font-weight: bold;
+        font-size: 28px;
     }
     .close-btn {
         cursor: pointer;

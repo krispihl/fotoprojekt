@@ -1,12 +1,7 @@
 <template>
   <div class="home">
     <div class="header">
-      <div class="wrapper">
-        <div class="title">FOTOPROJEKT <span>|</span> 
-          <img class="icon" src="../assets/camera.png" alt=""> 
-          Kasper Pihl
-        </div>
-      </div>
+      <div class="title">FOTOPROJEKT<span>//</span>KASPER PIHL</div>
     </div>
     <Gallery/>
     <div class="footer">&copy; KRISPIHL 2019</div>
@@ -27,37 +22,21 @@ export default {
 
 <style lang="scss">
   .header {
-    height: 85px;
-    background-color: #563444;
-    color:#fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-shadow:0px 5px 10px rgba(86,52,68, 0.9);
-  }
-  .wrapper {
-    display: flex;
-    align-items: center;
+    font-size: 40px;
+    padding: 40px 70px;
   }
   .title {
     margin-top: 5px;
 
     span {
-      margin-left: 5px;
+      margin: 0 15px;
     }
   }
-  .icon {
-    vertical-align: bottom;
-    height: 24px;
-    margin-left: 10px;
-    margin-right: 5px;
-  }
   .footer {
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin: 20px;
   }
 </style>

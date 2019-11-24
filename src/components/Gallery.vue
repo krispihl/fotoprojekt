@@ -23,7 +23,7 @@
           v-if="scaleItem === photo.id"
           class="overlay"
         >
-          {{ photo.title.toUpperCase() }}
+          {{ photo.title }}
         </div>
       </router-link>
     </div>
@@ -53,14 +53,15 @@ export default {
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 10px;
     max-width: 90%;
-    margin: 40px auto;
+    margin: 0 auto;
   }
   .gallery-panel img {
     width: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border: solid 3px #fff;
+    border-radius: 5px;
   }
   .image {
     transition: transform 0.25s ease-in;
@@ -73,13 +74,15 @@ export default {
   }
   .overlay {
     position: absolute;
-    padding: 7px 10px 5px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #040004;
     top: -150%;
     left: 50%;
     transform: translate(-50%,-50%);
+    font-size: 20px;
+    font-weight: normal;
     line-height: 1.2rem;
+    padding: 3px 10px 5px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #040004;
   }
 </style>
