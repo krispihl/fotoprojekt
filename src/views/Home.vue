@@ -4,7 +4,13 @@
       <div class="title">FOTOPROJEKT<span>//</span>KASPER PIHL</div>
     </div>
     <Gallery/>
-    <div class="footer">&copy; KRISPIHL 2019</div>
+    <div class="footer">
+      <span>&copy; KRISPIHL 2019</span>
+      <a href="test.zip" download>
+        Kõik pildid
+        <img src="../assets/download.png" alt="">
+      </a>
+    </div>
   </div>
 </template>
 
@@ -36,7 +42,19 @@ export default {
     }
   }
   .footer {
+    display: flex;
+    justify-content: space-between;
     font-size: 20px;
-    margin: 20px;
+    margin: 20px 100px;
+
+    a {
+      font-size: 23px;
+      color:#D48B92;
+      text-decoration: none;
+
+      img {
+        margin-left: 5px;
+      }
+    }
   }
 </style>

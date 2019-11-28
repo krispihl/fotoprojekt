@@ -28,20 +28,43 @@ export default {
       });
     },
   },
+	created() {
+    if (typeof window !== 'undefined') {
+      document.addEventListener('keydown', this.handleKeyPress)
+    }
+  },
+  beforeDestroy() {
+		if (typeof window !== 'undefined') {
+			document.removeEventListener('keydown', this.handleKeyPress)
+		}
+	},
   methods: {
     photoUrl(filename) {
       return require(`../assets/images/${filename}`);
+    },
+    handleKeyPress(e) {
+      if (e.keyCode === 37) {
+        this.previousImage();
+      } else if (e.keyCode === 39) {
+        this.nextImage();
+      } else if (e.keyCode === 27) {
+				this.goHome();
+			}
     },
     goHome() {
         router.push('/');
     },
     previousImage() {
+			if(this.$route.params.id > 0) {
         const previousPageId = Number(this.$route.params.id) -1;
         this.$router.push(`/photo/${previousPageId}`);
+			}
     },
     nextImage() {
+			if(this.$route.params.id < this.photos.length) {
         const nextPageId = Number(this.$route.params.id) +1;
         this.$router.push(`/photo/${nextPageId}`);
+			}
     }
   }
 };
