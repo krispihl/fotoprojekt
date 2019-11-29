@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <div class="header">
-      <div class="title">FOTOPROJEKT<span>//</span>KASPER PIHL</div>
-    </div>
+      <div class="header">
+        <div class="title">FOTOPROJEKT<span>//</span>KASPER PIHL</div>
+      </div>
     <Gallery/>
     <div class="footer">
       <span>&copy; KRISPIHL 2019</span>
@@ -51,6 +51,10 @@ export default {
       font-size: 23px;
       color:#D48B92;
       text-decoration: none;
+
+      &:hover {
+        color: #99464e;
+      }
 
       img {
         margin-left: 5px;

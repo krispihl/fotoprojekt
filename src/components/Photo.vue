@@ -1,10 +1,10 @@
 <template> 
     <div class="lightbox">
         <div class="lightbox-info">
-            <span v-if="Number(this.$route.params.id) !== 0" class="close-btn" @click="previousImage"><</span>
+            <span v-if="Number(this.$route.params.id) !== 0" class="button" @click="previousImage"><</span>
             {{ photo.title.toUpperCase() }}
-            <span v-if="(Number(this.$route.params.id) + 1) !== photos.length" class="close-btn" @click="nextImage">></span>
-            <span img class="close-btn" @click="goHome">X</span>
+            <span v-if="(Number(this.$route.params.id) + 1) !== photos.length" class="button" @click="nextImage">></span>
+            <span class="button button--close" @click="goHome">Sulge</span>
         </div>
         <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
     </div>
@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
     .lightbox-image {
         height: 800px;
         width: 800px;
@@ -91,10 +91,15 @@ export default {
         grid-row-start: 2;
         font-size: 28px;
     }
-    .close-btn {
-        cursor: pointer;
+		.button {
+				cursor: pointer;
         margin: 5px 8px 0;
         vertical-align: bottom;
-        width: 18px;
-    }
+
+				&--close {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+				}
+		}
 </style>
