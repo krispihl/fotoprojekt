@@ -113,5 +113,20 @@
         "id": 22,
         "title": "Muutused",
         "filename": "muutused.jpg"
+    },
+    {
+        "id": 23,
+        "title": "Siluett",
+        "filename": "siluett.jpg"
+    },
+    {
+        "id": 24,
+        "title": "Silmad",
+        "filename": "silmad.jpg"
+    },
+    {
+        "id": 25,
+        "title": "Lill",
+        "filename": "lill.jpg"
     }
   ]

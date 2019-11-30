@@ -45,7 +45,7 @@ export default {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    margin: 20px 100px;
+    margin: 40px 100px;
 
     a {
       font-size: 23px;
