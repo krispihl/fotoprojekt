@@ -1,28 +1,22 @@
 <template>
   <div class="gallery">
     <div 
-      class="gallery-panel"
       v-for="photo in photos"
       :key="photo.id"
+      class="gallery-panel"
     >
-      <router-link 
-        :to="`./photo/${photo.id}`"
-        class="link"
-      >
+      <router-link :to="`./photo/${photo.id}`" class="link">
         <img 
           :src="thumbUrl(photo.filename)"
           :alt="photo.title"
-          @mouseover="scaleItem = photo.id" 
-          @mouseout="scaleItem = null" 
           :class="[
             'image',
-            {scale: scaleItem === photo.id}
+            {'scale': scaleItem === photo.id}
           ]"
-        >
-        <div 
-          v-if="scaleItem === photo.id"
-          class="overlay"
-        >
+          @mouseover="scaleItem = photo.id" 
+          @mouseout="scaleItem = null" 
+        />
+        <div v-show="scaleItem === photo.id" class="overlay">
           {{ photo.title }}
         </div>
       </router-link>

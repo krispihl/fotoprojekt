@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-      <div class="header">
-        <div class="title">FOTOPROJEKT<span>//</span>KASPER PIHL</div>
-      </div>
+    <div class="header">
+      <div class="title">FOTOPROJEKT<span>&#47;&#47;</span>KASPER PIHL</div>
+    </div>
     <Gallery/>
     <div class="footer">
       <span>&copy; KRISPIHL 2019</span>
-      <a href="test.zip" download>
+      <a href="Kasperi_pildid.zip" download>
         Kõik pildid
         <img src="../assets/download.png" alt="">
       </a>
@@ -61,4 +61,13 @@ export default {
       }
     }
   }
+  @media only screen and (max-width: 600px) {
+		.footer {
+      margin: 20px;
+    }
+    .header span {
+      display: block;
+      margin: 5px 0;
+    }
+	}
 </style>

@@ -1,12 +1,28 @@
 <template> 
     <div class="lightbox">
         <div class="lightbox-info">
-            <span v-if="Number(this.$route.params.id) !== 0" class="button" @click="previousImage"><</span>
+            <span 
+							v-if="Number(this.$route.params.id) !== 1"
+							class="button"
+							@click="previousImage"
+						>
+							&#60;
+						</span>
             {{ photo.title.toUpperCase() }}
-            <span v-if="(Number(this.$route.params.id) + 1) !== photos.length" class="button" @click="nextImage">></span>
+            <span
+							v-if="(Number(this.$route.params.id)) !== photos.length"
+							class="button"
+							@click="nextImage"
+						>
+							&#62;
+						</span>
             <span class="button button--close" @click="goHome">Sulge</span>
         </div>
-        <div class="lightbox-image" :style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"></div>
+        <div 
+					class="lightbox-image"
+					:style="{ 'backgroundImage': `url(${photoUrl(photo.filename)})` }"
+				>
+				</div>
     </div>
 </template>
 
@@ -51,11 +67,8 @@ export default {
 				this.goHome();
 			}
     },
-    goHome() {
-        router.push('/');
-    },
     previousImage() {
-			if(this.$route.params.id > 0) {
+			if(this.$route.params.id > 1) {
         const previousPageId = Number(this.$route.params.id) -1;
         this.$router.push(`/photo/${previousPageId}`);
 			}
@@ -65,41 +78,53 @@ export default {
         const nextPageId = Number(this.$route.params.id) +1;
         this.$router.push(`/photo/${nextPageId}`);
 			}
-    }
+		},
+		goHome() {
+      router.push('/');
+    },
   }
 };
 </script>
 
 <style lang="scss">
-    .lightbox-image {
-        height: 800px;
-        width: 800px;
-        grid-row-start: 3;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center top;
-    }
-    .lightbox {
-        background-color: rgba(255, 255, 255, 0.1);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px 100px 1fr 50px;
-        justify-items: center;
-        align-items: center;
-    }
-    .lightbox-info {
-        grid-row-start: 2;
-        font-size: 28px;
-    }
-		.button {
-				cursor: pointer;
-        margin: 5px 8px 0;
-        vertical-align: bottom;
+	.lightbox {
+			background-color: rgba(0, 0, 0, 0.85);
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 50px 100px 700px calc(100vh - 850px);
+			justify-items: center;
+			align-items: center;
+	}
+	.lightbox-info {
+			grid-row-start: 2;
+			font-size: 28px;
+	}
+	.lightbox-image {
+			height: 700px;
+			width: 700px;
+			grid-row-start: 3;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center top;
+	}
+	.button {
+			cursor: pointer;
+			margin: 5px 8px 0;
+			vertical-align: bottom;
 
-				&--close {
-					position: absolute;
-					top: 10px;
-					right: 10px;
-				}
+			&--close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+	}
+	@media only screen and (max-width: 600px) {
+		.lightbox {
+			grid-template-rows: 50px 100px 300px calc(100vh - 450px);
 		}
+		.lightbox-image {
+			height: 300px;
+      width: 300px;
+		}
+	}
 </style>

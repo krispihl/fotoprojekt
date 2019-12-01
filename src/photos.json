@@ -1,132 +1,152 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "title": "Autoportree (esimene)",
         "filename": "autoportree_esimene.jpg"
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "Autoportree ilma näota",
         "filename": "autoportree_ilma_näota.jpg"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Jalanõud",
         "filename": "jalanõud.jpg"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Keegi, keda armastan",
         "filename": "keegi_keda_armastan.jpg"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Kinnisidee",
         "filename": "kinnisidee.jpg"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Loom",
         "filename": "loom.jpg"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Mälestused",
         "filename": "mälestused.jpg"
     },
     {
-        "id": 7,
+        "id": 8,
         "title": "Pimedus",
         "filename": "pimedus.jpg"
     },
     {
-        "id": 8,
+        "id": 9,
         "title": "Tehnoloogia",
         "filename": "tehnoloogia.jpg"
     },
     {
-        "id": 9,
+        "id": 10,
         "title": "Inspiratsioon",
         "filename": "inspiratsioon.jpg"
     },
     {
-        "id": 10,
+        "id": 11,
         "title": "Minu kotis",
         "filename": "minu_kotis.jpg"
     },
     {
-        "id": 11,
+        "id": 12,
         "title": "Midagi, mida ma kannan",
         "filename": "midagi_mida_ma_kannan.jpg"
     },
     {
-        "id": 12,
+        "id": 13,
         "title": "Mustrid",
         "filename": "mustrid.jpg"
     },
     {
-        "id": 13,
+        "id": 14,
         "title": "Hea harjumus",
         "filename": "hea_harjumus.jpg"
     },
     {
-        "id": 14,
+        "id": 15,
         "title": "Midagi rohelist",
         "filename": "midagi_rohelist.jpg"
     },
     {
-        "id": 15,
+        "id": 16,
         "title": "Pidu",
         "filename": "pidu.jpg"
     },
     {
-        "id": 16,
+        "id": 17,
         "title": "Võõrad",
         "filename": "võõrad.jpg"
     },
     {
-        "id": 17,
+        "id": 18,
         "title": "Midagi sinist",
         "filename": "midagi_sinist.jpg"
     },
     {
-        "id": 18,
+        "id": 19,
         "title": "Lähivõte",
         "filename": "lähivõte.jpg"
     },
     {
-        "id": 19,
+        "id": 20,
         "title": "Midagi, mida ma tahan",
         "filename": "midagi_mida_ma_tahan.jpg"
     },
     {
-        "id": 20,
+        "id": 21,
         "title": "Mustvalge",
         "filename": "mustvalge.jpg"
     },
     {
-        "id": 21,
+        "id": 22,
         "title": "Pilved",
         "filename": "pilved.jpg"
     },
     {
-        "id": 22,
+        "id": 23,
         "title": "Muutused",
         "filename": "muutused.jpg"
     },
     {
-        "id": 23,
+        "id": 24,
         "title": "Siluett",
         "filename": "siluett.jpg"
     },
     {
-        "id": 24,
+        "id": 25,
         "title": "Silmad",
         "filename": "silmad.jpg"
     },
     {
-        "id": 25,
+        "id": 26,
         "title": "Lill",
         "filename": "lill.jpg"
+    },
+    {
+        "id": 27,
+        "title": "Kelleta ei saa elada",
+        "filename": "kelleta_ei_saa_elada.jpg"
+    },
+    {
+        "id": 28,
+        "title": "Päikeseloojang",
+        "filename": "päikeseloojang.jpg"
+    },
+    {
+        "id": 29,
+        "title": "Rutiin",
+        "filename": "rutiin.jpg"
+    },
+    {
+        "id": 30,
+        "title": "Autoportree (viimane)",
+        "filename": "autoportree_viimane.jpg"
     }
   ]
