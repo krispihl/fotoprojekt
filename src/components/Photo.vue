@@ -118,7 +118,7 @@ export default {
 				right: 10px;
 			}
 	}
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 800px) {
 		.lightbox {
 			grid-template-rows: 50px 100px 300px calc(100vh - 450px);
 		}
